@@ -64,15 +64,15 @@ It will generate all necessary files for `List` model. Then stop server using
 
 Then visit http://localhost:3000/lists to check how it works.
 
-Now we have some stuff in out application to explore structure, let's do brief
+Now that we have some stuff in our application to explore structure, let's do a brief
 overview of files we have to get lists CRUD (create-read-update-delete) working.
 
 ### Explore app structure
 
 #### Router
 
-Let's start with routes because this is first place in compound stack where
-request handling happens. Routes listed in file `config/routes.js` which look
+Let's start with routes because this is the first place in compound stack where
+request handling happens. Routes are listed in file `config/routes.js` which look
 like:
 
 ```javascript
@@ -111,10 +111,10 @@ path, all route helpers available as methods on `pathTo` object. Examples:
     pathTo.edit_list(1); // '/lists/1/edit'
     pathTo.edit_list('my-list'); // '/lists/my-list/edit'
 
-> By default path helpers generated with underscores as words separators, this
-> behavior will be changed in future versions and it's highly recommended to add
+> By default path helpers are generated with underscores as words separators, this
+> behavior will be changed in future versions and **it's highly recommended to add
 > line map.camelCaseHelperNames = true; to the top of file to generate names in
-> camelCase: `newList` and `editList` instead of `new_list` and `edit_list`
+> camelCase**: `newList` and `editList` instead of `new_list` and `edit_list`
 
 #### Controller
 
